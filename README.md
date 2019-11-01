@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -22,3 +23,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+=======
+# rails-shop
+rails-shop
+>>>>>>> a1c11a1a0a97e22742ef45093185ed86ac0f6e2d
