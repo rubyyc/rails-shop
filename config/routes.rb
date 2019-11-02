@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :posts
+    resources :products
   end
   root 'posts#index'
   # get 'welcome/index'
