@@ -5,12 +5,14 @@ Rails.application.routes.draw do
       post :add_to_cart
     end
   end
+  resources :orders
 
   resources :cart_items
 
   resources :carts do
     collection do
       delete :clean
+      post :checkout
     end
   end
 
