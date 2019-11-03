@@ -33,6 +33,7 @@ Rails.application.routes.draw do
         patch :move_down
       end
     end
+    resources :orders
   end
   root 'products#index'
   # get 'welcome/index'
