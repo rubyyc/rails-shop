@@ -39,7 +39,7 @@ gem 'mini_magick'
 
 gem 'annotate'
 gem 'acts_as_list'
-
+gem 'aasm'
 
 
 
