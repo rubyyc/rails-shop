@@ -13,14 +13,7 @@ Rails.application.routes.draw do
   end
 
   namespace :account do
-    resources :orders do
-      member do
-        post :cancel
-        post :ship
-        post :shipped
-        post :return
-      end
-    end
+    resources :orders
   end
 
   resources :cart_items
@@ -40,7 +33,14 @@ Rails.application.routes.draw do
         patch :move_down
       end
     end
-    resources :orders
+    resources :orders do
+      member do
+        post :cancel
+        post :ship
+        post :shipped
+        post :return
+      end
+    end
   end
   root 'products#index'
   # get 'welcome/index'
