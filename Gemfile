@@ -38,6 +38,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 
 gem 'annotate'
+gem 'acts_as_list'
 
 
 
@@ -57,6 +58,8 @@ group :development, :test do
 end
 
 group :development do
+  gem 'pry'
+  gem 'awesome_rails_console'
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'

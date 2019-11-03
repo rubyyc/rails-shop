@@ -5,7 +5,7 @@ class Admin::ProductsController < ApplicationController
   layout "admin"
   
   def index
-    @products = Product.paginate(:page => params[:page], :per_page => 10)
+    @products = Product.paginate(:page => params[:page], :per_page => 10).order("position ASC")
   end
 
   def new
@@ -46,6 +46,18 @@ class Admin::ProductsController < ApplicationController
     @product = Product.find(params[:id])
     @product.delete
     flash[:notice] = "产品删除成功"
+    redirect_to admin_products_path
+  end
+
+  def move_up
+    @product = Product.find(params[:id])
+    @product.move_higher
+    redirect_to admin_products_path
+  end
+
+  def move_down
+    @product = Product.find(params[:id])
+    @product.move_lower
     redirect_to admin_products_path
   end
 
